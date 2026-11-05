@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff8f1" />
+  <title>CraveKart — Good food, delivered</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="announcement">Fresh flavours, happy prices <span>✦</span> Free delivery on orders over ₹499</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="CraveKart home"><span class="brand-mark">C</span> crave<span>Kart</span></a>
+    <nav class="desktop-nav">
+      <a class="active" href="#menu">Explore menu</a><a href="#how">How it works</a><a href="#about">Our story</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn search-toggle" aria-label="Search">⌕</button>
+      <button class="cart-trigger" id="cartOpen"><span>🛍</span><span class="cart-label">Your order</span><b
+          id="cartCount">0</b></button>
+      <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> GOOD FOOD. GOOD MOOD.</div>
+        <h1>Big cravings.<br><em>Little wait.</em></h1>
+        <p>From comfort classics to new favourites, get the food you love delivered fresh to your door.</p>
+        <div class="hero-buttons"><a class="btn btn-dark" href="#menu">Order food <span>↗</span></a><a class="text-link"
+            href="#how">How it works <span>→</span></a></div>
+        <div class="hero-proof">
+          <div class="avatar-stack"><i>😊</i><i>😋</i><i>🤩</i></div>
+          <div><strong>4.9/5</strong><small>Loved by foodies like you</small></div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-sticker">MADE<br>WITH <b>♥</b></div>
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1000&auto=format&fit=crop&q=85"
+          alt="Freshly baked pizza with toppings">
+        <div class="floating-card"><span class="floating-icon">⚡</span>
+          <div><strong>Fast delivery</strong><small>At your doorstep</small></div><b>25–35 min</b>
+        </div>
+      </div>
+      <div class="hero-bg-shape"></div>
+    </section>
+
+    <section class="benefits" id="how">
+      <div><span class="benefit-icon">🥬</span>
+        <p><strong>Fresh ingredients</strong><small>Quality you can taste</small></p>
+      </div>
+      <div><span class="benefit-icon">🛵</span>
+        <p><strong>Quick delivery</strong><small>Hot food, happy you</small></p>
+      </div>
+      <div><span class="benefit-icon">♡</span>
+        <p><strong>Made with care</strong><small>A little joy in every bite</small></p>
+      </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">A LITTLE SOMETHING FOR EVERYONE</div>
+          <h2>Find your <em>favourite.</em></h2>
+        </div>
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search dishes..."
+            aria-label="Search dishes"></label>
+      </div>
+      <div class="category-row" id="categories">
+        <button class="category active" data-category="All"><span>🍽️</span> All items</button>
+        <button class="category" data-category="Pizza"><span>🍕</span> Pizza</button>
+        <button class="category" data-category="Burgers"><span>🍔</span> Burgers</button>
+        <button class="category" data-category="Asian"><span>🍜</span> Asian</button>
+        <button class="category" data-category="Sides"><span>🍟</span> Sides</button>
+        <button class="category" data-category="Desserts"><span>🍰</span> Desserts</button>
+        <button class="category" data-category="Drinks"><span>🥤</span> Drinks</button>
+      </div>
+      <div class="menu-meta"><span id="resultCount">Showing popular picks</span><select id="sortSelect"
+          aria-label="Sort menu">
+          <option value="popular">Sort: Popular</option>
+          <option value="low">Price: Low to high</option>
+          <option value="high">Price: High to low</option>
+          <option value="rating">Top rated</option>
+        </select></div>
+      <div class="food-grid" id="foodGrid"></div>
+      <div class="empty-state hidden" id="emptyState"><span>🍽️</span>
+        <h3>No dishes found</h3>
+        <p>Try another search or category.</p><button class="btn btn-dark" id="resetFilters">Show all dishes</button>
+      </div>
+    </section>
+
+    <section class="promo" id="about">
+      <div class="promo-art"><img
+          src="https://images.unsplash.com/photo-1547592180-85f173990554?w=900&auto=format&fit=crop&q=85"
+          alt="Colourful fresh food bowl"><span class="promo-burst">YUM<br>YUM!</span></div>
+      <div class="promo-copy">
+        <div class="eyebrow">A GOOD DAY STARTS WITH GOOD FOOD</div>
+        <h2>Made for your<br><em>happy place.</em></h2>
+        <p>Whether it's a solo treat, a family feast or a catch-up with friends, there's always something delicious
+          waiting for you.</p><a class="btn btn-dark" href="#menu">Explore the menu <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div>
+        <div class="eyebrow">THE GOOD STUFF, STRAIGHT TO YOU</div>
+        <h2>Hungry for more?</h2>
+        <p>Get special offers and tasty updates in your inbox.</p>
+      </div>
+      <form id="newsletterForm"><input type="email" placeholder="Your email address" required
+          aria-label="Your email address"><button class="btn btn-dark">Sign me up <span>→</span></button></form>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-mark">C</span> crave<span>Kart.</span></a>
+    <p>Good food. Good mood. © <span id="year"></span> CraveKart.</p>
+    <div><a href="#menu">Menu</a><a href="#about">About</a><a href="mailto:hello@CraveKart.example">Contact</a></div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer-head">
+      <div><span class="eyebrow">YOUR DELICIOUS PICKS</span>
+        <h2>Your order <span id="drawerCount">(0)</span></h2>
+      </div><button class="close-btn" id="cartClose" aria-label="Close cart">×</button>
+    </div>
+    <div class="delivery-note">🛵 <span>Usually at your door in <strong>25–35 minutes</strong></span></div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty"><span>🛍️</span>
+        <h3>Your cart is looking hungry</h3>
+        <p>Add something delicious from the menu.</p>
+      </div>
+    </div>
+    <div class="cart-bottom hidden" id="cartBottom">
+      <div class="coupon-row"><input id="couponInput" placeholder="Promo code (try YUM10)"><button
+          id="applyCoupon">Apply</button></div>
+      <p class="coupon-message" id="couponMessage"></p>
+      <div class="bill-line"><span>Subtotal</span><b id="subtotal">₹0</b></div>
+      <div class="bill-line"><span>Delivery fee</span><b id="deliveryFee">₹0</b></div>
+      <div class="bill-line discount-line hidden" id="discountLine"><span>Discount</span><b id="discount">−₹0</b></div>
+      <div class="bill-line total-line"><span>Total</span><b id="total">₹0</b></div>
+      <button class="btn btn-dark checkout-btn" id="checkoutBtn">Continue to checkout <span>→</span></button><small
+        class="secure-note">🔒 Secure checkout · Demo storefront</small>
+    </div>
+  </aside>
+
+  <div class="modal-backdrop hidden" id="checkoutModal">
+    <div class="checkout-modal">
+      <button class="close-btn modal-close" id="modalClose" aria-label="Close">×</button>
+      <div id="checkoutFormWrap">
+        <div class="eyebrow">ALMOST THERE!</div>
+        <h2>Let's get it <em>delivered.</em></h2>
+        <p class="modal-intro">Enter your details to place this demo order.</p>
+        <form id="checkoutForm">
+          <label>Full name<input name="name" required placeholder="Your name"></label>
+          <label>Phone number<input name="phone" required inputmode="tel" pattern="[0-9+() -]{8,16}"
+              placeholder="Your phone number"></label>
+          <label>Delivery address<textarea name="address" required rows="3"
+              placeholder="House / street / area / city"></textarea></label>
+          <label>Payment method<select name="payment">
+              <option>Cash on delivery</option>
+              <option>UPI (demo only)</option>
+            </select></label>
+          <button class="btn btn-dark checkout-btn" type="submit">Place demo order <span>→</span></button>
+        </form>
+      </div>
+      <div class="success-state hidden" id="successState">
+        <div class="success-icon">✓</div>
+        <div class="eyebrow">ORDER RECEIVED</div>
+        <h2>You're in for a <em>treat!</em></h2>
+        <p id="successMessage">Your demo order has been placed.</p><button class="btn btn-dark" id="doneBtn">Back to
+          menu</button>
+      </div>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+
+</html>
